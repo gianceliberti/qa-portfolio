@@ -1,0 +1,29 @@
+# QA Automation — Roadmap de 30 días
+
+Plan de transición de QA manual a automatización (SDET). Cada carpeta es un día
+del plan, con su objetivo y —cuando está hecho— el código comentado.
+
+## Progreso
+
+| Semana | Foco | Estado |
+|--------|------|--------|
+| [Semana 1](week-1-fundamentals/) | TypeScript + Playwright fundamentals | 🟡 en curso (Días 1–3 ✅) |
+| [Semana 2](week-2-architecture-api-cicd/) | Arquitectura de framework, API y CI/CD | ⚪ pendiente |
+| [Semana 3](week-3-mobile-desktop-perf-a11y/) | Mobile, Desktop, Performance, Accesibilidad | ⚪ pendiente |
+| [Semana 4](week-4-ai-senior-market/) | IA en testing + capa senior + mercado | ⚪ pendiente |
+
+## Días completados
+
+- ✅ **Día 1** — [Setup](week-1-fundamentals/day-1-setup/)
+- ✅ **Día 2** — [Primer contacto con Playwright](week-1-fundamentals/day-2-first-contact/)
+- ✅ **Día 3** — [Locators](week-1-fundamentals/day-3-locators/)
+
+## Cómo correr los tests
+
+```bash
+npx playwright test                       # toda la suite, 3 browsers
+npx playwright test --project=chromium    # solo chromium (más rápido)
+npx playwright test day-3                  # filtra por ruta (ej. Día 3)
+./atajos.sh ui                             # modo UI para estudiar
+./atajos.sh report                         # reporte HTML
+```

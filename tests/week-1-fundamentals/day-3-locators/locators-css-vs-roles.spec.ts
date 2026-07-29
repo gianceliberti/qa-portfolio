@@ -13,8 +13,8 @@ import { fileURLToPath } from "node:url";
  *   - login-v2.html  → clases renombradas  (.auth-go, .field--username)
  *
  * Cómo correr:
- *   npx playwright test dia3 --project=chromium                  → usa v1
- *   APP_VERSION=v2 npx playwright test dia3 --project=chromium   → usa v2
+ *   npx playwright test day-3 --project=chromium                  → usa v1
+ *   APP_VERSION=v2 npx playwright test day-3 --project=chromium   → usa v2
  */
 
 // __dirname no existe en módulos ESM; lo reconstruimos a partir de import.meta.url.

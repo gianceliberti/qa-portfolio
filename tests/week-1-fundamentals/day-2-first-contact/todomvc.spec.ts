@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { TodoPage } from '../pages/todo.page';
+import { TodoPage } from './pages/todo.page';
 
 /**
  * UI end-to-end tests for the TodoMVC demo, driven through a Page Object.

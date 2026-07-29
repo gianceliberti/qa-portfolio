@@ -7,9 +7,9 @@ import { test, expect } from "@playwright/test";
  * Usuario normal: standard_user / secret_sauce
  *
  * Cómo correr:
- *   npx playwright test dia2                 → headless, los 3 browsers
- *   npx playwright test dia2 --ui            → modo UI (el mejor para estudiar)
- *   npx playwright test dia2 --project=chromium --headed
+ *   npx playwright test day-2                 → headless, los 3 browsers
+ *   npx playwright test day-2 --ui            → modo UI (el mejor para estudiar)
+ *   npx playwright test day-2 --project=chromium --headed
  *   npx playwright show-report               → reporte HTML del último run
  */
 

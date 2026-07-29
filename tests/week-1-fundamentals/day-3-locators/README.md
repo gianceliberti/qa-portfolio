@@ -22,10 +22,10 @@ El mismo test escrito de dos formas ([`locators-fragiles-vs-roles.spec.ts`](loca
 
 ```bash
 # Ronda 1 — clases originales: pasa todo
-npx playwright test dia3 --project=chromium
+npx playwright test day-3 --project=chromium
 
 # Ronda 2 — clases renombradas: el CSS se rompe, los roles sobreviven
-APP_VERSION=v2 npx playwright test dia3 --project=chromium
+APP_VERSION=v2 npx playwright test day-3 --project=chromium
 ```
 
 ## El resultado (la medición)
@@ -40,6 +40,6 @@ Con **un solo** rediseño de clases:
 ## Ver la evidencia del fallo
 
 ```bash
-APP_VERSION=v2 npx playwright test dia3 --project=chromium   # genera el fallo
+APP_VERSION=v2 npx playwright test day-3 --project=chromium   # genera el fallo
 npx playwright show-report                                   # screenshot + video + traza
 ```

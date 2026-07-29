@@ -1,14 +1,18 @@
 # QA Portfolio — Playwright + TypeScript
 
-End-to-end and API test automation showcase built with [Playwright](https://playwright.dev/) and TypeScript.
+End-to-end and API test automation showcase built with [Playwright](https://playwright.dev/) and TypeScript, organised as a **30-day QA→SDET roadmap**.
+
+> 📍 **Roadmap and progress:** see [`tests/README.md`](tests/README.md). The repo is
+> structured by week and day; each folder holds that day's objective and commented code.
 
 ## What's inside
 
 | Area | File | Demonstrates |
 |------|------|--------------|
-| UI E2E | [`tests/ui/todo.spec.ts`](tests/ui/todo.spec.ts) | User flows via the Page Object Model, cross-browser runs, reload persistence |
-| Page Object | [`tests/pages/todo.page.ts`](tests/pages/todo.page.ts) | Encapsulated locators and actions for maintainable specs |
-| API | [`tests/api/posts.spec.ts`](tests/api/posts.spec.ts) | Status codes, payload/shape assertions, GET/POST, negative cases |
+| UI E2E | [`todomvc.spec.ts`](tests/week-1-fundamentals/day-2-first-contact/todomvc.spec.ts) | User flows via the Page Object Model, cross-browser runs, reload persistence |
+| Page Object | [`login.page.ts`](tests/week-1-fundamentals/day-2-first-contact/pages/login.page.ts) | Encapsulated locators and actions for maintainable specs |
+| Locators | [`locators-css-vs-roles.spec.ts`](tests/week-1-fundamentals/day-3-locators/locators-css-vs-roles.spec.ts) | Measured demo: role-based locators survive a CSS redesign, CSS selectors don't |
+| API | [`posts.spec.ts`](tests/week-2-architecture-api-cicd/day-8-api-testing/posts.spec.ts) | Status codes, payload/shape assertions, GET/POST, negative cases |
 | CI | [`.github/workflows/playwright.yml`](.github/workflows/playwright.yml) | Automated runs on every push/PR with report artifacts |
 
 ## Getting started
@@ -32,7 +36,7 @@ Run a single project or file:
 
 ```bash
 npx playwright test --project=chromium
-npx playwright test tests/api/posts.spec.ts
+npx playwright test day-2        # filter by path (e.g. a given day)
 ```
 
 ## Tech
