@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swag Labs — Login</title>
+  </head>
+  <body>
+    <h1>Swag Labs</h1>
+
+    <!-- VERSIÓN 2 (rediseño). Para el USUARIO es idéntica: mismos labels,
+         mismo botón "Login". Pero el equipo renombró TODAS las clases:
+         login-input   → field
+         login-submit  → auth-go
+         btn-primary   → button--main
+         Un test basado en CSS se rompe acá. Uno basado en roles, no. -->
+    <form>
+      <label for="user">Username</label>
+      <input id="user" class="field field--username" type="text" />
+
+      <label for="pass">Password</label>
+      <input id="pass" class="field field--password" type="password" />
+
+      <button class="button button--main auth-go" type="submit">Login</button>
+    </form>
+  </body>
+</html>
