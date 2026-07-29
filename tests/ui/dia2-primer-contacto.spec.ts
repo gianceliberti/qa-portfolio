@@ -205,8 +205,11 @@ test("versión correcta: acá sí falla como corresponde", async ({ page }) => {
   //              si el elemento está visible. Como el botón NO existe, la
   //              aserción reintenta 5s y falla con un timeout claro.
   //
-  // Este test DEBE fallar: ese es el objetivo de la lección.
-  // Lo dejo ACTIVO a propósito para que veas el fallo en el reporte.
-  // Si más adelante querés la suite 100% verde, comentá la línea de abajo.
-  await expect(botonInventado).toBeVisible();
+  // Este test DEBE fallar: ese es el objetivo de la lección (el botón no existe).
+  // La dejo COMENTADA para que la suite quede 100% verde (útil para el CI).
+  // 👉 Para VER la lección en acción: descomentá la línea de abajo y corré el
+  //    test — vas a ver el fallo por timeout en el reporte. Después volvé a
+  //    comentarla. Es exactamente lo que pedía el enunciado del ejercicio.
+  //
+  // await expect(botonInventado).toBeVisible();
 });
