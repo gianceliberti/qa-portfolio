@@ -7,7 +7,7 @@ del plan, con su objetivo y —cuando está hecho— el código comentado.
 
 | Semana | Foco | Estado |
 |--------|------|--------|
-| [Semana 1](week-1-fundamentals/) | TypeScript + Playwright fundamentals | 🟡 en curso (Días 1–3 ✅) |
+| [Semana 1](week-1-fundamentals/) | TypeScript + Playwright fundamentals | 🟡 en curso (Días 1–4 ✅) |
 | [Semana 2](week-2-architecture-api-cicd/) | Arquitectura de framework, API y CI/CD | ⚪ pendiente |
 | [Semana 3](week-3-mobile-desktop-perf-a11y/) | Mobile, Desktop, Performance, Accesibilidad | ⚪ pendiente |
 | [Semana 4](week-4-ai-senior-market/) | IA en testing + capa senior + mercado | ⚪ pendiente |
@@ -17,6 +17,7 @@ del plan, con su objetivo y —cuando está hecho— el código comentado.
 - ✅ **Día 1** — [Setup](week-1-fundamentals/day-1-setup/)
 - ✅ **Día 2** — [Primer contacto con Playwright](week-1-fundamentals/day-2-first-contact/)
 - ✅ **Día 3** — [Locators](week-1-fundamentals/day-3-locators/)
+- ✅ **Día 4** — [Debugging y trazas](week-1-fundamentals/day-4-debugging/)
 
 ## Cómo correr los tests
 
