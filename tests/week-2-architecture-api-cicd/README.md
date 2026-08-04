@@ -4,7 +4,7 @@
 
 | Día | Tema | Estado |
 |-----|------|--------|
-| [Día 6](day-6-page-object-model/) | Page Object Model y alternativas | ⚪ |
+| [Día 6](day-6-page-object-model/) | Page Object Model y alternativas | ✅ |
 | [Día 7](day-7-test-data/) | Datos de prueba | ⚪ |
 | [Día 8](day-8-api-testing/) | API testing como código | 🟡 iniciado |
 | [Día 9](day-9-docker/) | Docker | ⚪ |
