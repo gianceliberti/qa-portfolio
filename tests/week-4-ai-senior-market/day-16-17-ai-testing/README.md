@@ -13,5 +13,6 @@ Separar lo real de los "wrappers de GPT":
 - **e) Testear sistemas con IA (el skill emergente):** no-determinismo, evals
   (golden datasets, LLM-as-judge), prompt injection, alucinaciones, regresión.
 
-> Ventaja tuya: ya construís skills de Claude (`bug-report generator`,
-> `release-notes generator`). Eso YA es IA aplicada a QA. Empaquetalo y contalo.
+> Si construís herramientas internas con IA para QA (generación de reportes de bugs,
+> análisis de fallos, release notes desde commits…), eso YA es IA aplicada a testing.
+> Empaquetalo y contalo — es justo lo que el mercado busca.
