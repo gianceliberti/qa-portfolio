@@ -8,7 +8,7 @@ del plan, con su objetivo y —cuando está hecho— el código comentado.
 | Semana | Foco | Estado |
 |--------|------|--------|
 | [Semana 1](week-1-fundamentals/) | TypeScript + Playwright fundamentals | ✅ completa (Días 1–5 + Proyecto 1) |
-| [Semana 2](week-2-architecture-api-cicd/) | Arquitectura de framework, API y CI/CD | 🟢 Días 6–10 ✅ (falta Proyecto 2) |
+| [Semana 2](week-2-architecture-api-cicd/) | Arquitectura de framework, API y CI/CD | ✅ completa (Días 6–10 + Proyecto 2) |
 | [Semana 3](week-3-mobile-desktop-perf-a11y/) | Mobile, Desktop, Performance, Accesibilidad | ⚪ pendiente |
 | [Semana 4](week-4-ai-senior-market/) | IA en testing + capa senior + mercado | ⚪ pendiente |
 

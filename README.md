@@ -1,5 +1,7 @@
 # QA Portfolio — Playwright + TypeScript
 
+[![Playwright Tests](https://github.com/gianceliberti/qa-portfolio/actions/workflows/playwright.yml/badge.svg)](https://github.com/gianceliberti/qa-portfolio/actions/workflows/playwright.yml)
+
 End-to-end and API test automation showcase built with [Playwright](https://playwright.dev/) and TypeScript, organised as a **30-day QA→SDET roadmap**.
 
 > 📍 **Roadmap and progress:** see [`tests/README.md`](tests/README.md). The repo is
