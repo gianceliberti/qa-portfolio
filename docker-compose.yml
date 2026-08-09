@@ -1,0 +1,26 @@
+# docker-compose orquesta uno o varios contenedores con un solo comando.
+# Acá tenemos el servicio de tests; abajo, comentado, cómo agregarías la app y una
+# DB para probar contra un stack local reproducible (app + DB + tests).
+#
+#   docker compose up --build     → construye y corre la suite
+#
+services:
+  tests:
+    build: . # usa el Dockerfile de esta carpeta
+    command: npx playwright test
+    # Montamos el reporte hacia afuera para poder abrirlo en el host tras la corrida.
+    volumes:
+      - ./playwright-report:/app/playwright-report
+
+  # --- Ejemplo (comentado): stack local app + DB ---
+  # En un proyecto real, testearías contra tu propia app levantada acá, no contra
+  # sitios públicos. Los tests esperarían a que la app esté lista (depends_on).
+  #
+  # app:
+  #   image: tu-app:latest
+  #   ports: ["3000:3000"]
+  #   depends_on: [db]
+  # db:
+  #   image: postgres:16
+  #   environment:
+  #     POSTGRES_PASSWORD: test

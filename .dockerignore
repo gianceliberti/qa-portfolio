@@ -1,0 +1,8 @@
+# No copiamos al contenedor lo que no hace falta (o lo que es específico del host).
+node_modules
+test-results
+playwright-report
+.auth
+.git
+.DS_Store
+*.log
