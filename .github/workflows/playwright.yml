@@ -1,5 +1,6 @@
 name: Playwright Tests
 
+# Trigger: en cada push a main y en cada pull request hacia main.
 on:
   push:
     branches: [main]
@@ -7,9 +8,48 @@ on:
     branches: [main]
 
 jobs:
+  # --- Job de tests: corre en 3 shards PARALELOS (3 máquinas a la vez) ---
   test:
+    name: Test (shard ${{ matrix.shard }}/3)
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    strategy:
+      fail-fast: false # si un shard falla, los otros igual terminan
+      matrix:
+        shard: [1, 2, 3] # SHARDING: la suite se parte en 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm # CACHÉ de dependencias entre corridas
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      # Cada máquina corre solo su parte (1/3, 2/3, 3/3). Retries en CI: config.
+      - name: Run tests (shard ${{ matrix.shard }}/3)
+        run: npx playwright test --shard=${{ matrix.shard }}/3
+
+      # Cada shard sube su "blob" (fragmento de reporte) como artefacto.
+      - name: Upload blob report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: blob-report-${{ matrix.shard }}
+          path: blob-report/
+          retention-days: 7
+
+  # --- Job de reporte: junta los 3 fragmentos en UN solo reporte HTML ---
+  report:
+    name: Merge reports
+    if: ${{ !cancelled() }}
+    needs: [test] # espera a que terminen los 3 shards
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -21,16 +61,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+      - name: Download all blob reports
+        uses: actions/download-artifact@v4
+        with:
+          path: all-blob-reports
+          pattern: blob-report-*
+          merge-multiple: true
 
-      - name: Run Playwright tests
-        run: npm test
+      - name: Merge into a single HTML report
+        run: npx playwright merge-reports --reporter html ./all-blob-reports
 
+      # ARTEFACTO final: el reporte HTML unificado (descargable desde la corrida).
       - name: Upload HTML report
-        if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: html-report
           path: playwright-report/
           retention-days: 14

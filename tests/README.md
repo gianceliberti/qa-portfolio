@@ -8,7 +8,7 @@ del plan, con su objetivo y —cuando está hecho— el código comentado.
 | Semana | Foco | Estado |
 |--------|------|--------|
 | [Semana 1](week-1-fundamentals/) | TypeScript + Playwright fundamentals | ✅ completa (Días 1–5 + Proyecto 1) |
-| [Semana 2](week-2-architecture-api-cicd/) | Arquitectura de framework, API y CI/CD | 🟡 en curso (Días 6–9 ✅) |
+| [Semana 2](week-2-architecture-api-cicd/) | Arquitectura de framework, API y CI/CD | 🟢 Días 6–10 ✅ (falta Proyecto 2) |
 | [Semana 3](week-3-mobile-desktop-perf-a11y/) | Mobile, Desktop, Performance, Accesibilidad | ⚪ pendiente |
 | [Semana 4](week-4-ai-senior-market/) | IA en testing + capa senior + mercado | ⚪ pendiente |
 
@@ -23,6 +23,7 @@ del plan, con su objetivo y —cuando está hecho— el código comentado.
 - ✅ **Día 7** — [Datos de prueba](week-2-architecture-api-cicd/day-7-test-data/)
 - ✅ **Día 8** — [API testing como código](week-2-architecture-api-cicd/day-8-api-testing/)
 - ✅ **Día 9** — [Docker](week-2-architecture-api-cicd/day-9-docker/)
+- ✅ **Día 10** — [CI/CD con GitHub Actions](week-2-architecture-api-cicd/day-10-github-actions/)
 
 ## Cómo correr los tests
 

@@ -8,5 +8,5 @@
 | [Día 7](day-7-test-data/) | Datos de prueba | ✅ |
 | [Día 8](day-8-api-testing/) | API testing como código | ✅ |
 | [Día 9](day-9-docker/) | Docker | ✅ |
-| [Día 10](day-10-github-actions/) | CI/CD con GitHub Actions | ⚪ |
+| [Día 10](day-10-github-actions/) | CI/CD con GitHub Actions | ✅ |
 | [Proyecto 2](project-2/) | Refactor + API + pipeline verde | ⚪ |
